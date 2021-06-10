@@ -159,12 +159,11 @@ Use the getReviewsByRating function below to do the following:
   ]
 */
 
-
 function getReviewByRating(a , n) {
   let newA = [];
   for (let i = 0; i < a.length; i++){
-  if(a[i].rating < n+1)
-  if(a[i].rating >= n){
+  if(a[i]['rating'] < n+1)
+  if(a[i]['rating'] >= n){
     newA.push(a[i])
 
     }
@@ -173,7 +172,9 @@ function getReviewByRating(a , n) {
    return newA
 
 }
-  
+getReviewByRating(reviews, 3)
+
+
 /* 💪💪💪💪💪💪💪💪💪💪 STRETCH 2: 💪💪💪💪💪💪💪💪💪💪   
 Use the getLongReviews function below to do the following:
   1. Receive the array that holds all the reviews
@@ -187,10 +188,17 @@ Use the getLongReviews function below to do the following:
   ]
 */
 
-function getLongReviews(/* code here */) {
-    /* code here */
+function getLongReviews(a) {
+  let newA = [];
+  for(let i = 0; i < a.length; i++){
+    if(a[i]['feedback'].split(" ").length > 15){
+      newA.push(a[i])
+    }
   }
-  
+  return newA
+}
+
+getLongReviews(reviews)
 
 /* 💪💪💪💪💪💪💪💪💪💪 STRETCH 3: 💪💪💪💪💪💪💪💪💪💪 
 This stretch goal does not use the reviews data!  You create your own object in this stretch goal.
