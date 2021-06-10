@@ -159,10 +159,20 @@ Use the getReviewsByRating function below to do the following:
   ]
 */
 
- function getReviewByRating(/* code here */) {
-    /* code here */
+
+function getReviewByRating(a , n) {
+  let newA = [];
+  for (let i = 0; i < a.length; i++){
+  if(a[i].rating < n+1)
+  if(a[i].rating >= n){
+    newA.push(a[i])
+
+    }
   }
 
+   return newA
+
+}
   
 /* 💪💪💪💪💪💪💪💪💪💪 STRETCH 2: 💪💪💪💪💪💪💪💪💪💪   
 Use the getLongReviews function below to do the following:
